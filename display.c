@@ -1,4 +1,5 @@
 // Драйвер дисплея
+#include <stdio.h>
 #include "display.h"
 
 HDC dc;                   // Контекст вывода

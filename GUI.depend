@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1670137045 source:d:\it\c\projects\gui\main.c
+1670142492 source:d:\it\c\projects\gui\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
 	"display.h"
 
-1670137189 source:d:\it\c\projects\gui\display.c
+1670142642 source:d:\it\c\projects\gui\display.c
+	<stdio.h>
 	"display.h"
 
 1670134745 d:\it\c\projects\gui\display.h
@@ -13,7 +14,7 @@
 
 1670135799 d:\it\c\projects\gui\bgl.h
 
-1670137072 source:d:\it\c\projects\gui\bgl.c
+1670142219 source:d:\it\c\projects\gui\bgl.c
 	"BGL.h"
 	"display.h"
 

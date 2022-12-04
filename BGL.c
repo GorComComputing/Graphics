@@ -1,6 +1,9 @@
 // Графическая библиотека
+//#include <math.h>
+
 #include "BGL.h"
 #include "display.h"
+
 
 int CC; // Текущий цвет
 int BC; // Цвет заднего фона
@@ -36,4 +39,58 @@ void ClearDevice(){
 // Точка
 void PutPixel(int x, int y, int Color){
     FillLB((BITMAP_WIDTH*(GETMAX_Y-y) + x), 1, Color);
+}
+
+
+// Линия ЦДА
+void LineDDAgl(int x1, int y1, int x2, int y2){
+    int dx = abs(x2-x1);
+    int dy = abs(y2-y1);
+    if(dx > dy){
+        float k = (float)(y2-y1)/(float)(x2-x1);
+        int x;
+        int xend;
+        float yf;
+        if(x1 < x2){
+            x = x1;
+            xend = x2;
+            yf = y1;
+        }
+        else {
+            x = x2;
+            xend = x1;
+            yf = y2;
+        }
+        PutPixel(x, (int)roundf(yf), CC);
+        while(x < xend){
+            x++;
+            yf += k;
+            PutPixel(x, (int)roundf(yf), CC);
+        }
+    }
+    else if(dy > 0){
+        float k = (float)(x2-x1)/(float)(y2-y1);
+        int y;
+        int yend;
+        float xf;
+        if(y1 < y2){
+            y = y1;
+            yend = y2;
+            xf = x1;
+        }
+        else {
+            y = y2;
+            yend = y1;
+            xf = x2;
+        }
+        PutPixel((int)roundf(xf), y, CC);
+        while(y < yend){
+            y++;
+            xf += k;
+            PutPixel((int)roundf(xf), y, CC);
+        }
+    }
+    else{
+        PutPixel(x1, y1, CC);
+    }
 }

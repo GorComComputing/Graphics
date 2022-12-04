@@ -22,6 +22,23 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Linker>
+			<Add library="C:/Program Files/CodeBlocks/MinGW/x86_64-w64-mingw32/lib/libgdi32.a" />
+		</Linker>
+		<Unit filename="BGL.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BGL.h">
+			<Option compile="1" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="display.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="display.h">
+			<Option compile="1" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -65,7 +65,7 @@ void FillLB(int start, int count, int value){
 void FillLBrnd(){
     for(int i = 0; i < SIZE; i++){
         if(pBmp[i] != 1){
-            pBmp[i] = rand()%(256*256*256);
+            pBmp[i] = rand()%(256);
         }
     }
 }
